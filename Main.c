@@ -59,7 +59,7 @@ int	main(int argc, char **argv)
 	{
 		printf("Veuillez sélectionné un fractal parmis les suivants :\n1- \
 Mandelbrot\n2- Julia");
-		exit(0);
+		win_close(&fract);
 	}
 	draw_fractal(&fract);
 	mlx_put_image_to_window(fract.mlx, fract.win,

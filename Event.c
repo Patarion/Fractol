@@ -98,6 +98,7 @@ void	get_move_val(t_screen_data *fract)
 void	update_fract(t_screen_data *fract)
 {
 	get_move_val(fract);
+	mlx_destroy_image(fract->mlx, fract->img.image);
 	fract->img.image = mlx_new_image(fract->mlx, fract->img.max_x,
 			fract->img.max_y);
 	fract->img.addr = mlx_get_data_addr(fract->img.image, &fract->img.bpp,
