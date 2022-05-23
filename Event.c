@@ -21,19 +21,20 @@ int	win_close(t_screen_data *fract)
 
 int	move_event(int key, t_screen_data *fract)
 {
-	if (key == 2)
+	if (key == 2 || key == 124)
 		fract->img.min_val -= fract->img.zoom;
-	if (key == 0)
+	if (key == 0 || key == 123)
 		fract->img.min_val += fract->img.zoom;
-	if (key == 1)
+	if (key == 1 || key == 125)
 		fract->img.max_val += fract->img.zoom;
-	if (key == 13)
+	if (key == 13 || key == 126)
 		fract->img.max_val -= fract->img.zoom;
 	if (key == 49)
 	{
 		fract->img.max_val = 2.5;
 		fract->img.min_val = -2.5;
 	}
+	printf("%d\n", key);
 	if (key == 53)
 		win_close(fract);
 	if (key || key == 0)
