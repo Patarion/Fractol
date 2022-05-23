@@ -34,7 +34,6 @@ int	move_event(int key, t_screen_data *fract)
 		fract->img.max_val = 2.5;
 		fract->img.min_val = -2.5;
 	}
-	printf("%d\n", key);
 	if (key == 53)
 		win_close(fract);
 	if (key || key == 0)
